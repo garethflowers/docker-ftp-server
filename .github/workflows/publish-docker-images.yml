@@ -1,0 +1,30 @@
+name: Publish Docker Images
+on:
+  push:
+    branches: [ master ]
+  release:
+    types: [ published ]
+jobs:
+  push_to_registries:
+    name: Push Docker images
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: garethflowers/ftp-server
+          add_git_labels: true
+          tag_with_ref: true
+      - name: Push to GitHub Packages
+        uses: docker/build-push-action@v1
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: garethflowers/docker-ftp-server/ftp-server
+          add_git_labels: true
+          tag_with_ref: true
