@@ -13,8 +13,8 @@ ENV FTP_USER=foo \
 RUN apk add --no-cache --update \
 	vsftpd==3.0.3-r6
 
-COPY [ "/vsftpd.conf", "/etc" ]
-COPY [ "/docker-entrypoint.sh", "/" ]
+COPY [ "/src/vsftpd.conf", "/etc" ]
+COPY [ "/src/docker-entrypoint.sh", "/" ]
 
 CMD [ "/usr/sbin/vsftpd" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
