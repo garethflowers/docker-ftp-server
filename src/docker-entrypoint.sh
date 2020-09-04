@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -e
-
 addgroup \
 	-S \
 	$FTP_USER
