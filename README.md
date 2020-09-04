@@ -13,8 +13,8 @@ docker run \
 	--detach \
 	--env FTP_USER=user \
 	--env FTP_PASS=123 \
+	--network host \
 	--volume /data:/home/user \
-	--publish 21:21 \
 	garethflowers/ftp-server
 ```
 
