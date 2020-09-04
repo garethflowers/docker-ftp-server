@@ -18,4 +18,5 @@ COPY [ "/src/docker-entrypoint.sh", "/" ]
 
 CMD [ "/usr/sbin/vsftpd" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
+EXPOSE 20
 EXPOSE 21
