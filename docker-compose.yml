@@ -1,9 +1,0 @@
-version: "3"
-services:
-  app:
-    build: .
-    expose:
-      - 21
-    image: garethflowers/ftp-server
-    network_mode: host
-    restart: always
