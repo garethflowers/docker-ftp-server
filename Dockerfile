@@ -20,3 +20,4 @@ CMD [ "/usr/sbin/vsftpd" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 EXPOSE 20
 EXPOSE 21
+HEALTHCHECK CMD netstat -lnt | grep :21 || exit 1
