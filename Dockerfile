@@ -18,6 +18,5 @@ COPY [ "/src/docker-entrypoint.sh", "/" ]
 
 CMD [ "/usr/sbin/vsftpd" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
-EXPOSE 20
-EXPOSE 21
+EXPOSE 20/tcp 21/tcp
 HEALTHCHECK CMD netstat -lnt | grep :21 || exit 1
