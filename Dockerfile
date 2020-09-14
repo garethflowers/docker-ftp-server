@@ -8,7 +8,9 @@ LABEL org.opencontainers.image.authors="Gareth Flowers" \
 	org.opencontainers.image.vendor="garethflowers"
 
 ENV FTP_USER=foo \
-	FTP_PASS=bar
+	FTP_PASS=bar \
+	GID=1000 \
+	UID=1000
 
 RUN apk add --no-cache --update \
 	vsftpd==3.0.3-r6
