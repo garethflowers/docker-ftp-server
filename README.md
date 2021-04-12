@@ -6,7 +6,9 @@ A simple FTP server, using `vsftpd`.
 
 ### Start a FTP Server instance
 
-To start a container, with data stored in `/data` on the host, use the following:
+To start a container, with data stored in `/data` on the host, use the
+following:
+
 ```sh
 docker run \
 	--detach \
@@ -21,4 +23,5 @@ docker run \
 
 ## License
 
-*	This image is released under the [MIT License](https://raw.githubusercontent.com/garethflowers/docker-ftp-server/master/LICENSE).
+-   This image is released under the
+    [MIT License](https://raw.githubusercontent.com/garethflowers/docker-ftp-server/master/LICENSE).
