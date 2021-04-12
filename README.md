@@ -1,6 +1,7 @@
 # FTP Server
 
-A simple FTP server, using `vsftpd`.
+A simple FTP server, using
+[`vsftpd`](https://security.appspot.com/vsftpd.html).
 
 ## How to use this image
 
