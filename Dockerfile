@@ -1,12 +1,5 @@
 FROM alpine:3.12.0
 
-LABEL org.opencontainers.image.authors="Gareth Flowers" \
-	org.opencontainers.image.description="FTP Server" \
-	org.opencontainers.image.licenses="MIT" \
-	org.opencontainers.image.title="ftp-server" \
-	org.opencontainers.image.url="https://github.com/garethflowers/docker-ftp-server" \
-	org.opencontainers.image.vendor="garethflowers"
-
 ENV FTP_USER=foo \
 	FTP_PASS=bar \
 	GID=1000 \
