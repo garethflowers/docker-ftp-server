@@ -47,7 +47,7 @@ jobs:
           labels: ${{ steps.prep.outputs.labels }}
       - name: Update Description
         continue-on-error: true
-        uses: peter-evans/dockerhub-description@v2
+        uses: peter-evans/dockerhub-description@v2.4.2
         with:
           short-description: ${{ github.event.repository.description }}
           username: ${{ secrets.DOCKERHUB_USERNAME }}
