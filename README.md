@@ -5,7 +5,7 @@ A simple FTP server, using
 
 ## How to use this image
 
-### Start a FTP Server instance
+### start a FTP Server instance
 
 To start a container, with data stored in `/data` on the host, use the
 following:
@@ -20,6 +20,23 @@ docker run \
 	--publish 40000-40009:40000-40009/tcp \
 	--volume /data:/home/user \
 	garethflowers/ftp-server
+```
+
+### ... via `docker compose`
+
+```yml
+services:
+  ftp-server:
+    container_name: my-ftp-server
+    environment:
+      - FTP_PASS=123
+      - FTP_USER=user
+    image: garethflowers/ftp-server
+    ports:
+      - '20-21:20-21/tcp'
+      - '40000-40009:40000-40009/tcp'
+    volumes:
+      - '/data:/home/user'
 ```
 
 ## License
