@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -xe
 export IMAGE_NAME=garethflowers/ftp-server
 
 docker build --tag $IMAGE_NAME .
