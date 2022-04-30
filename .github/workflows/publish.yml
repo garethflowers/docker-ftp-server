@@ -1,16 +1,14 @@
-name: Publish
+name: Publish to Container Registries
 on:
-  page_build:
   pull_request:
     branches:
       - main
   push:
     branches:
-      - "**"
-    tags:
-      - "*.*.*"
+      - main
 jobs:
-  main:
+  publish:
+    name: Publish
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
