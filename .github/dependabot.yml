@@ -1,10 +1,13 @@
 version: 2
 updates:
   - package-ecosystem: "github-actions"
-    assignees:
-      - "garethflowers"
     directory: "/"
-    reviewers:
-      - "garethflowers"
+    schedule:
+      interval: "daily"
+  - package-ecosystem: "docker"
+    commit-message:
+      include: "scope"
+      prefix: "chore"
+    directory: "/"
     schedule:
       interval: "daily"
