@@ -1,4 +1,4 @@
-name: Publish to Container Registries
+name: Build and Publish Images
 on:
   pull_request:
     branches:
