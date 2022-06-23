@@ -1,0 +1,3 @@
+remote_theme: garethflowers/jekyll-simple-theme
+plugins:
+  - jekyll-remote-theme
