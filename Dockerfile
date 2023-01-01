@@ -5,7 +5,7 @@ ENV FTP_USER=foo \
 	UID=1000
 
 RUN apk add --no-cache --update \
-	vsftpd==3.0.5-r1
+	vsftpd==3.0.5-r2
 
 COPY [ "/src/vsftpd.conf", "/etc" ]
 COPY [ "/src/docker-entrypoint.sh", "/" ]
