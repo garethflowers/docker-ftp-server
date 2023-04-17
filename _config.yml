@@ -1,3 +1,4 @@
-remote_theme: garethflowers/jekyll-simple-theme
+docker_repository: garethflowers/ftp-server
 plugins:
   - jekyll-remote-theme
+remote_theme: garethflowers/jekyll-simple-theme
