@@ -1,4 +1,5 @@
 docker_repository: garethflowers/ftp-server
 plugins:
   - jekyll-remote-theme
+  - jekyll-sitemap
 remote_theme: garethflowers/jekyll-simple-theme
