@@ -1,4 +1,4 @@
-FROM alpine:3.18.3
+FROM alpine:3.18.4
 ENV FTP_USER=foo \
 	FTP_PASS=bar \
 	GID=1000 \
