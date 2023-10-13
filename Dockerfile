@@ -1,4 +1,4 @@
-FROM alpine:3.18.2
+FROM alpine:3.18.4
 ENV FTP_USER=foo \
 	FTP_PASS=bar \
 	GID=1000 \
@@ -10,7 +10,6 @@ RUN apk add --no-cache --update \
 COPY [ "/src/vsftpd.conf", "/etc" ]
 COPY [ "/src/docker-entrypoint.sh", "/" ]
 
-CMD [ "/usr/sbin/vsftpd" ]
 ENTRYPOINT [ "/docker-entrypoint.sh" ]
 EXPOSE 20/tcp 21/tcp 40000-40009/tcp
 HEALTHCHECK CMD netstat -lnt | grep :21 || exit 1
