@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Prepare
         id: prep
-        uses: docker/metadata-action@v5.0.0
+        uses: docker/metadata-action@v5.2.0
         with:
           images: |
             ${{ github.repository_owner }}/ftp-server
