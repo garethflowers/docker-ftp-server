@@ -1,6 +1,7 @@
 FROM alpine:3.19.0
 ENV FTP_USER=foo \
 	FTP_PASS=bar \
+	CHOWN_FILES_ON_STARTUP=1 \
 	GID=1000 \
 	UID=1000
 
