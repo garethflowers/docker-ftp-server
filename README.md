@@ -34,7 +34,7 @@ services:
     image: garethflowers/ftp-server
     ports:
       - '20-21:20-21/tcp'
-      - '40000-40009:40000-40009/tcp'
+      - '40000-40009:40000-40009/tcp' # Only needed for passive mode
     volumes:
       - '/data:/home/user'
 ```
