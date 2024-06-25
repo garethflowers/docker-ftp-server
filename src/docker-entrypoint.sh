@@ -14,7 +14,12 @@ adduser \
 	$FTP_USER
 
 mkdir -p /home/$FTP_USER
-chown -R $FTP_USER:$FTP_USER /home/$FTP_USER
+if [ -n "$CHOWN_FILES_ON_STARTUP" ]; then
+	echo "Fixing file ownership..."
+	chown -R $FTP_USER:$FTP_USER /home/$FTP_USER
+else
+	echo "Not changing file ownership."
+fi
 echo "$FTP_USER:$FTP_PASS" | /usr/sbin/chpasswd
 
 touch /var/log/vsftpd.log
