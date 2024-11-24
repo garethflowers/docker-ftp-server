@@ -29,18 +29,18 @@ docker run \
 
 ```yml
 services:
-	ftp-server:
-		container_name: my-ftp-server
-		environment:
-			- PUBLIC_IP=192.168.0.1
-			- FTP_PASS=123
-			- FTP_USER=user
-		image: garethflowers/ftp-server
-		ports:
-			- "20-21:20-21/tcp"
-			- "40000-40009:40000-40009/tcp" # For passive mode
-		volumes:
-			- "/data:/home/user"
+    ftp-server:
+        container_name: my-ftp-server
+        environment:
+            - PUBLIC_IP=192.168.0.1
+            - FTP_PASS=123
+            - FTP_USER=user
+        image: garethflowers/ftp-server
+        ports:
+            - "20-21:20-21/tcp"
+            - "40000-40009:40000-40009/tcp" # For passive mode
+        volumes:
+            - "/data:/home/user"
 ```
 
 ## Configuration
@@ -59,6 +59,8 @@ services:
 | ----------- | ------------- | ------------------------------------------------- |
 | `FTP_PASS`  | `bar`         | The FTP password                                  |
 | `FTP_USER`  | `foo`         | The FTP username                                  |
+| `UID`       | `1000`        | User ID for the `$FTP_USER` user                  |
+| `GID`       | `1000`        | Group ID for the `$FTP_USER` user                 |
 | `PUBLIC_IP` | `0.0.0.0`     | Public IP address to use for Passive connections. |
 
 ## License
