@@ -2,8 +2,6 @@ version: 2
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
-    reviewers:
-      - "garethflowers"
     schedule:
       interval: "daily"
   - package-ecosystem: "docker"
@@ -11,7 +9,5 @@ updates:
       include: "scope"
       prefix: "chore"
     directory: "/"
-    reviewers:
-      - "garethflowers"
     schedule:
       interval: "daily"
