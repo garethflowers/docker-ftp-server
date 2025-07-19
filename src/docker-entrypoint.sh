@@ -20,4 +20,8 @@ tail -f /var/log/vsftpd.log | tee /dev/stdout &
 touch /var/log/xferlog
 tail -f /var/log/xferlog | tee /dev/stdout &
 
-exec "$@"
+if [ "$@" = "/usr/sbin/vsftpd" ]; then
+	/usr/sbin/vsftpd
+else
+	exec "$@"
+fi
