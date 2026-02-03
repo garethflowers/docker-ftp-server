@@ -1,4 +1,4 @@
-FROM alpine:3.22.1
+FROM alpine:3.23.3
 ENV FTP_USER=foo \
 	FTP_PASS=bar \
 	GID=1000 \
@@ -6,7 +6,7 @@ ENV FTP_USER=foo \
 	PUBLIC_IP=0.0.0.0
 
 RUN apk add --no-cache --update \
-	vsftpd==3.0.5-r2
+	vsftpd==3.0.5-r3
 
 COPY [ "/src/vsftpd.conf", "/etc" ]
 COPY [ "/src/docker-entrypoint.sh", "/" ]
